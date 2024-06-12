@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo DOM 4</title>
+</head>
+
+<body>
+    <h1> Usando seletor do DOM</h1>
+    <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>NodeJS</li>
+    </ul>
+
+    <div id="conteudo" name="divconteudo" class="mensagem">
+
+    </div>
+
+    <div name="divconteudo" class="mensagem">
+
+    </div>
+
+    <div name="divconteudo" class="mensagem">
+
+    </div>
+
+    <span id="novospan" class="novo">cocozinho grandinho</span>
+    <div class="mensagem"></div>
+
+
+</body>
+<script>
+    elemento0 = document.getElementsByTagName('li')[0];
+    elemento0.style.color = 'blue';
+    elemento0.style.background = 'black';
+    elemento0.innerText = "SpringBoot";
+
+    elemento0 = document.getElementsByTagName('li')[1];
+    elemento0.style.color = 'green';
+    elemento0.style.background = 'black';
+
+    elemento0 = document.getElementsByTagName('li')[1];
+    elemento0.style.color = 'red';
+    elemento0.style.background = 'black';
+
+    elementoDiv = document.getElementById("conteudo");
+    elementoDiv.innerHTML = "<p>Estou colocando a tag p dentro da div</p>";
+
+    elementoDivName = document.getElementsByName("divconteudo")[1];
+    elementoDivName.style.color = "blue";
+    elementoDivName.innerText = "<p>Estou colocando a tag p dentro da div</p>";
+
+    elementoDivClass = document.getElementsByClassName("mensagem")[2];
+    elementoDivClass.innerText = "<p>Estou colocando a tag p dentro da div 2</p>";
+
+    elementoSpan = document.querySelector("span.novo");
+    elementoSpan.style.color = "yellow";
+
+    // elementoSpan = document.querySelector(".novo");
+    // elementoSpan.style.color = "yellow";
+
+    // elementoSpan = document.querySelector("#novospan");
+    // elementoSpan.style.color = "yellow";
+
+    elementoSeletor = document.querySelectorAll(".mensagem")[3];
+    elementoSeletor.innerHTML = "<p> Texto inculuido</p>"
+
+</script>
+
+</html>
